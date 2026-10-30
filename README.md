@@ -5,10 +5,16 @@ Proyek persiapan data (data preparation) dan visualisasi Business Intelligence p
 ## Tujuan
 Menyiapkan data yang bersih dan siap analisis, lalu menggali hubungan antara penggunaan media sosial, kualitas tidur, stres, kecemasan, dan status depresi pada remaja.
 
+## Isi repositori
+| File | Keterangan |
+| --- | --- |
+| `teen-mental-health.ipynb` | Notebook data preparation dan visualisasi BI |
+| `Teen_Mental_Health_Dataset_DIRUSAK.csv` | Dataset awal (1.260 baris, 13 kolom) yang disediakan untuk keperluan asesmen LSP |
+| `power bi.pbix` | Laporan Power BI sederhana (latihan terpisah, lihat bagian Dashboard Power BI) |
+
 ## Data
 - Data awal: 1.260 baris dan 13 kolom.
 - Kolom utama: usia, jenis kelamin, jam media sosial per hari, platform yang dipakai, jam tidur, waktu layar sebelum tidur, performa akademik, aktivitas fisik, level interaksi sosial, level stres, level kecemasan, level kecanduan, dan label depresi (0 = tidak, 1 = ya).
-- Dataset disediakan untuk keperluan asesmen sehingga tidak disertakan di repositori ini.
 
 ## Tahapan persiapan data
 | Tahap | Tindakan | Hasil |
@@ -31,6 +37,9 @@ Distribusi status depresi, rata-rata stres per level interaksi sosial, heatmap k
 - **Hubungan variabel:** korelasi label depresi dengan jam media sosial (0,18), stres (0,17), kecemasan (0,18), dan jam tidur (-0,19) tergolong lemah. Variabel lain mendekati nol.
 - **Tren per durasi:** rata-rata stres naik dari 5,34 (0-2 jam) menjadi 5,83 (8+ jam), dan kecemasan dari 5,05 menjadi 6,00. Polanya naik tetapi tidak linier dan selisihnya kecil.
 
+## Dashboard Power BI
+File `power bi.pbix` adalah laporan Power BI sederhana dari latihan terpisah dan tidak memakai dataset kesehatan mental di atas. Laporan ini berisi satu halaman dengan dua grafik yang memakai data kemiskinan per provinsi (kemiskinan, umur harapan hidup, dan tingkat pengangguran terbuka). Data sudah tertanam di dalam file, jadi file ini bisa dibuka langsung dengan Power BI Desktop. Laporan ini masih berupa versi awal yang akan dikembangkan.
+
 ## Keterbatasan
 - Hubungan antar variabel bersifat deskriptif dan tidak menunjukkan sebab-akibat.
 - Korelasi antar kolom platform hasil one-hot encoding (sekitar -0,5) hanya akibat teknik encoding, bukan temuan.
@@ -38,11 +47,11 @@ Distribusi status depresi, rata-rata stres per level interaksi sosial, heatmap k
 - Kelas depresi sangat tidak seimbang, sehingga perlu penanganan khusus bila dilanjutkan ke pemodelan.
 
 ## Teknologi
-Python, Google Colab, pandas, NumPy, Matplotlib, Seaborn, WordCloud
+Python, Google Colab, pandas, NumPy, Matplotlib, Seaborn, WordCloud, Power BI
 
 ## Cara menjalankan
 1. Buka notebook `teen-mental-health.ipynb` di Google Colab.
-2. Unggah dataset ke `/content/Teen_Mental_Health_Dataset_DIRUSAK.csv` (atau ubah jalur file di sel pertama).
+2. Unggah `Teen_Mental_Health_Dataset_DIRUSAK.csv` ke `/content/` (atau ubah jalur file di sel pertama).
 3. Jalankan sel secara berurutan.
 
 ## Penulis
