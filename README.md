@@ -42,8 +42,6 @@ File `power bi.pbix` adalah laporan Power BI sederhana dari latihan terpisah dan
 
 ## Keterbatasan
 - Hubungan antar variabel bersifat deskriptif dan tidak menunjukkan sebab-akibat.
-- Korelasi antar kolom platform hasil one-hot encoding (sekitar -0,5) hanya akibat teknik encoding, bukan temuan.
-- Baris dengan nilai kosong dihapus, bukan diisi (imputasi), sehingga sekitar 23% data awal tidak terpakai.
 - Kelas depresi sangat tidak seimbang, sehingga perlu penanganan khusus bila dilanjutkan ke pemodelan.
 
 ## Teknologi
